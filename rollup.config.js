@@ -1,3 +1,4 @@
+import alias from '@rollup/plugin-alias'
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import resolve from "@rollup/plugin-node-resolve";
 import typescript from "rollup-plugin-typescript2";
@@ -21,6 +22,11 @@ export default {
   ],
   external: ['crypto'],
   plugins: [
+    alias({
+      entries: [
+        { find: 'amazon-chime-sdk-js', replacement: '@vietaapp/amazon-chime-sdk-js' },
+      ]
+    }),
     peerDepsExternal(),
     resolve(),
     commonjs(),
