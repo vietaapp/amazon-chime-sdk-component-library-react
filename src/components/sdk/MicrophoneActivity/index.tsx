@@ -26,6 +26,7 @@ export const MicrophoneActivity: React.FC<Props> = ({
       return;
     }
 
+    // @ts-ignore
     const callback = (_, volume) => {
       if (bgEl.current) {
         bgEl.current.style.transform = `scaleY(${volume})`;
