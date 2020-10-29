@@ -34,6 +34,7 @@ export const MicrophoneActivity: React.FC<Props> = ({
 
     audioVideo.realtimeSubscribeToVolumeIndicator(attendeeId, callback)
 
+    // @ts-ignore
     return () => audioVideo.realtimeUnsubscribeFromVolumeIndicator(attendeeId, callback);
   }, [attendeeId]);
 
