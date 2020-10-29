@@ -7,10 +7,6 @@
   "files": [
     "lib"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/vietaapp/amazon-chime-sdk-component-library"
-  },
   "publishConfig": {
     "access": "restricted",
     "registry": "https://npm.pkg.github.com/"

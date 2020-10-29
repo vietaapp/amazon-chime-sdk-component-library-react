@@ -31,7 +31,7 @@ export function useAttendeeAudioStatus(attendeeId: string) {
 
     audioVideo.realtimeSubscribeToVolumeIndicator(attendeeId, callback);
 
-    return () => audioVideo.realtimeUnsubscribeFromVolumeIndicator(attendeeId);
+    return () => audioVideo.realtimeUnsubscribeFromVolumeIndicator(attendeeId, callback);
   }, [audioVideo, attendeeId]);
 
   return {
