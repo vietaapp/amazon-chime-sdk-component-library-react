@@ -5,22 +5,58 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## Unreleased
 
 ### Fixed
-- Docs rename variable `rosterArray ` from the attendees list to `attendees`
+
+- Fixed ModalBody component to allow custom classNames
+- Fixed PopOver components to allow custom classNames
+- Fixed small visual errors in chat componnets.
+- Fixed broken snapshot tests for Badge component.
+- Fixed slight spacing issue in ChatBubbleContainer.
+- Fixed issue where checkmark in PopOverItem wouldn't change on hover/focus.
+- Removed unused import in ChatBubble component.
+
+### Added
+
+- Added Lock and Pin icons
+- Export Chat components and utilities
+- Added Attachment, Dock, and Emoji picker icons
+
+### Changed
+
+- Changed ChatBubbleContainer props to be more flexible.
+- Changed Record icon
+- Slight style changes to Modal and PopOver components.
+- Changed Badge props to be more flexible.
+- Changed PopOver component styling.
+
+### Removed
+
+- Removed DateHeader component
+
+## [1.4.0] - 2020-11-06
+
+### Fixed
+
+- Docs rename variable `rosterArray` from the attendees list to `attendees`
 - Add base styles to ChannelList
 - Fixed createChatBubbleList unit test that was incorrectly named and not running
 - Fixed TS error inside /InfiniteList/index.tsx.
 
 ### Added
+
 - Add `tabIndex` to BaseProps
 - Add `Like`, `Dislike`, `Feedback` icons
 - Add `isSelected` prop to NavBarItem
 - Add optional children to RosterHeader for custom element rendering
 - Add optional `icon` property for `Radio` and `RadioGroup` to allow for rendering an icon instead of a label
-- Add Document icon and MessageAttachment components. 
+- Add Document icon and MessageAttachment components.
 - Add stories and tests for all ChatBubble components.
+- Add class to DateHeader component.
+- Add Attachment icon
+- Added passthrough for a react node in the subtitle of PopOverHeader
+- Add `buttonProps` passthrough for `RosterCell` and `PopOverMenu`
 
 ### Changed
 
@@ -32,6 +68,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Changed ChatBubble component props for simplicity.
 
 ### Removed
+
 - Removed createChatBubbleList function.
 - Removed exports and stories for unreleased chat components
 

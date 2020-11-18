@@ -27,7 +27,11 @@ export const StyledChatBubbleContainer = styled.div<
   width: 100%;
 
   .ch-timestamp {
-    padding-right: ${(props) => (props.actions ? '' : '2rem')};
+    padding-right: ${(props) => (props.actions ? '1rem' : '2.5rem')};
+  }
+
+  .ch-popover-toggle {
+    height: 1.5rem;
   }
 
   ${baseSpacing}
@@ -55,10 +59,10 @@ export const StyledChatBubble = styled.div<StyledChatBubbleProps>`
 
   & svg {
     position: absolute;
-    height: 9px;
-    width: 4px;
-    margin-top: -3px;
-    margin-left: -20px;
+    height: 19px;
+    width: 11px;
+    margin-top: -14px;
+    margin-left: -25px;
 
     & .ch-chat-bubble-tail {
       fill: ${(props) => props.theme.chatBubble[props.variant].bgd};
@@ -90,6 +94,7 @@ export const StyledChatBubbleInfo = styled.div`
   align-items: center;
 
   & .ch-message-actions {
+    border: 1px solid transparent;
     border-radius: 50%;
   }
 

@@ -7,7 +7,6 @@ import { BaseProps } from '../../Base';
 import { StyledChatBubbleContainer, StyledChatBubbleInfo } from './Styled';
 import PopOver from '../../PopOver';
 import { Dots } from '../../icons';
-import { formatTime } from '../../Utilities';
 
 export type Message = {
   /** The displayed text of the message sent. */
@@ -30,7 +29,7 @@ export interface ChatBubbleContainerProps
   extends Omit<HTMLAttributes<HTMLDivElement>, 'css'>,
     BaseProps {
   /** The time the message was originally sent. */
-  timestamp?: string;
+  timestamp?: string | ReactNode;
   /** This allows for custom elements to be rendered into the optional popover menu for each message, such as an edit button. */
   actions?: ReactNode | ReactNode[];
 }
@@ -47,7 +46,7 @@ export const ChatBubbleContainer: FC<ChatBubbleContainerProps> = (props) => {
       <StyledChatBubbleInfo>
         {timestamp && (
           <span className="ch-timestamp" data-testid="message-time">
-            {formatTime(timestamp)}
+            {timestamp}
           </span>
         )}
         {actions && (
@@ -56,8 +55,8 @@ export const ChatBubbleContainer: FC<ChatBubbleContainerProps> = (props) => {
             placement="bottom-end"
             renderButton={(isOpen) => (
               <Dots
-                width="2rem"
-                height="2rem"
+                width="1.5rem"
+                height="1.5rem"
                 className={`${isOpen ? 'isOpen' : ''} ch-message-actions`}
               />
             )}
