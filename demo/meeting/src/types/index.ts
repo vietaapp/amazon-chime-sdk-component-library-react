@@ -31,6 +31,6 @@ export type LocalAudioOutputContextType = {
 
 export type ContentShareControlContextType = {
   isContentSharePaused: boolean;
-  toggleContentShare: () => Promise<void>;
+  toggleContentShare: (sourceId?: string) => Promise<void>;
   togglePauseContentShare: () => void;
 };
